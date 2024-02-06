@@ -24,7 +24,7 @@ export default function Topics() {
           return (
             <li key={topic.slug}>
               <Link
-                to={`/articlesByTopic/${topic.slug}`}
+                to={`/articles/${topic.slug}`}
                 onClick={() => handleTopicClick(topic.slug)}
                 className={selectedTopic === topic.slug ? "active" : ""}
               >

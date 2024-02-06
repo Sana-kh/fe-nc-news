@@ -5,14 +5,18 @@ const ncApi = axios.create({
 
 export const getArticles = () => {
   return ncApi.get("/articles").then((res) => {
-    console.log(res.data.articles)
     return res.data.articles;
   });
 };
 
 export const getTopics = () => {
   return ncApi.get("/topics").then((res) => {
-    console.log(res.data)
     return res.data.topics;
   });
 };
+
+export const getArticleByArticleId = (articleId) =>{
+  return ncApi.get(`/articles/${articleId}`).then((res) => {
+    return res.data.article;
+  })
+}
