@@ -24,7 +24,7 @@ export default function Home() {
                 </h2>
                 <p>{item.body}</p>
                 <p>{item.author}</p>
-                <p>{item.created_at}</p>
+                <p>{new Date(item.created_at).toLocaleDateString()}</p>
                 <p>{item.votes} votes</p>
                 <p>{item.comment_count} comments</p>
               </li>

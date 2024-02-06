@@ -15,8 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path= "/" element= {<Home />}/>
-        <Route path= "/Articles" element= {<Articles />} />
-        <Route path= "/Topics" element= {<Topics />} />
+        <Route path= "/articles" element= {<Articles />} />
+        <Route path= "/topics" element= {<Topics />} />
         <Route path= "/articlesByTopic/:TopicName" element= {<ArticlesByTopic />} />
         <Route path="/articles/:articleId" element={<SingleArticle />} />
       </Routes>

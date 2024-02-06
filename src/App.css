@@ -12,7 +12,7 @@ body {
 
 /* Header & navigation */
 
-.header {
+header {
   /* background-color: #9c1d5c; */
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoqBUKCvAR9CJkEyHO1W3JIkL0gtq3wju96A&s');
   color: white;
@@ -196,3 +196,30 @@ nav ul li a:hover {
   color: white;
 }
 
+/* SingleArticle */
+
+.single-article {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.single-article img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.article-body {
+  margin-top: 20px;
+  line-height: 1.6;
+}
