@@ -20,3 +20,9 @@ export const getArticleByArticleId = (articleId) =>{
     return res.data.article;
   })
 }
+
+export const getCommentsByArticleId = (articleId) => {
+  return ncApi.get(`/articles/${articleId}/comments`).then((res) => {
+    return res.data.comments;
+  })
+}

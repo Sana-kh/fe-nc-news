@@ -198,8 +198,8 @@ nav ul li a:hover {
 
 /* SingleArticle */
 
-.single-article {
-  max-width: 600px;
+.article-view {
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -207,7 +207,7 @@ nav ul li a:hover {
   background-color: #f9f9f9;
 }
 
-.single-article img {
+.article-view img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -220,6 +220,48 @@ nav ul li a:hover {
 }
 
 .article-body {
-  margin-top: 20px;
+  margin-top: 25px;
   line-height: 1.6;
+}
+
+/* ArticleView.css */
+
+/* .article-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+} */
+
+.comments-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.comments-button:hover {
+  background-color: #0056b3;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-card p {
+  margin: 5px 0;
 }
