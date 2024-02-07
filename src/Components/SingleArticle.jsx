@@ -2,19 +2,32 @@ import { getArticleByArticleId, getCommentsByArticleId } from "./Api";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CommentList from "./CommentList";
+import VoteArticle from "./VoteArticle";
 
 export default function SingleArticle() {
   const [article, setArticle] = useState(null);
   const { articleId } = useParams();
   const [showComments, setShowComments] = useState(false);
   const [comments, setComments] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() =>{
     getArticleByArticleId(articleId).then((data)=>{
         setArticle(data);
     })
+    .catch((error)=>{
+      setError(error)
+    })
     getCommentsByArticleId(articleId).then((comments)=>{
       setComments(comments)
+    })
+      .catch((error) => {
+        if (error.response && error.response.status === 404) {
+          setComments([]);
+        } else {
+          setError(error);
+        }
+      
     })
   },[articleId])
 
@@ -40,6 +53,7 @@ export default function SingleArticle() {
                 <strong>Publication Date:</strong>{" "}
                 {new Date(article.created_at).toLocaleDateString()}
               </p>
+              <VoteArticle articleId={articleId} initialVotes={article.votes} />
               <p>
                 <strong>Comments:</strong> {article.comment_count}
               </p>
@@ -50,7 +64,11 @@ export default function SingleArticle() {
       {showComments && (
         <div className="comment-section">
           <h3>Comments</h3>
+          {comments.length === 0 ? (
+            <div>No comments yet.</div>
+          ) : (
           <CommentList comments={comments} />
+          )}
         </div>
       )}
              
