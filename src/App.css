@@ -265,3 +265,30 @@ nav ul li a:hover {
 .comment-card p {
   margin: 5px 0;
 }
+
+.vote-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #500a3e;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vote-button:hover {
+  background-color: #f03cc9;
+}
+
+.vote-button:disabled {
+  background-color: #dcdcdc;
+  color: #808080;
+}
+.upvote {
+  margin-right: 8px;
+}
+
+.downvote {
+  margin-left: 8px;
+}
