@@ -19,7 +19,7 @@ export default function () {
       <ul>
         {articles.map((article) => {
           return (
-            <ArticleCard article= {article}/>
+            <ArticleCard article= {article} key={article.article_id}/>
           );
         })}
       </ul>
