@@ -32,3 +32,9 @@ export const voteArticle = (articleId, newVote) => {
     return res.data.article;
   })
 }
+
+export const postComment =(articleId, comment) => {
+  return ncApi.post(`/articles/${articleId}/comments`, comment).then((res)=>{
+    return res.data.comment;
+  })
+}

@@ -255,7 +255,7 @@ nav ul li a:hover {
 }
 
 .comment-card {
-  background-color: #f9f9f9;
+  background-color: #f7f4f4;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -269,8 +269,8 @@ nav ul li a:hover {
 .vote-button {
   padding: 8px 16px;
   border: none;
-  border-radius: 4px;
-  background-color: #500a3e;
+  border-radius: 10px;
+  background-color: #55073b;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
@@ -278,7 +278,7 @@ nav ul li a:hover {
 }
 
 .vote-button:hover {
-  background-color: #f03cc9;
+  background-color: #912579;
 }
 
 .vote-button:disabled {
@@ -291,4 +291,52 @@ nav ul li a:hover {
 
 .downvote {
   margin-left: 8px;
+}
+
+.comment-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0e4e4;
+}
+
+.comment-form-container input[type="text"],
+.comment-form-container textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-form-container .error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.comment-form-container .success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.comment-form-container button {
+  width: 100%;
+  padding: 10px;
+  border:#333;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comment-form-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.comment-section .comment-form-container{
+margin-bottom: 30px;
 }
