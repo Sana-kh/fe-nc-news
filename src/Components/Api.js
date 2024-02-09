@@ -44,3 +44,9 @@ export const deleteComment =(commentId)=>{
     return;
   })
 }
+
+export const getArticlesByTopic = (slug) => {
+  return ncApi.get(`/articles/?topic=${slug}`).then((res) => {
+    return res.data.articles;
+  });
+};
