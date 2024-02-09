@@ -2,25 +2,25 @@ import { useState } from "react";
 import { postComment } from "./Api";
 
 export default function PostComment({ articleId }) {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("jessjelly");
   const [body, setBody] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!username || !body) {
-      setError("Please enter both username and comment.");
+      setError("Please enter a comment.");
       return;
     }
     setSubmitting(true);
-    setUsername("");
     setBody("");
     setError(null);
     postComment(articleId, { username, body })
       .then(() => {
         setSuccess(true);
+        setSubmitting(false)
       })
       .catch((error) => {
         setSuccess(false);
@@ -33,13 +33,6 @@ export default function PostComment({ articleId }) {
   return (
     <div>
       <form onSubmit={handleSubmit} className="comment-form-container">
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username"
-          disabled={submitting}
-        />
         <textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
