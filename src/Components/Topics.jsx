@@ -24,7 +24,7 @@ export default function Topics() {
           return (
             <li key={topic.slug}>
               <Link
-                to={`/articles/${topic.slug}`}
+                to={`/articlesInTopic/${topic.slug}`}
                 onClick={() => handleTopicClick(topic.slug)}
                 className={selectedTopic === topic.slug ? "active" : ""}
               >
@@ -37,3 +37,5 @@ export default function Topics() {
     </div>
   );
 }
+
+
