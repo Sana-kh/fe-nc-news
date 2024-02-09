@@ -21,7 +21,7 @@ export default function VoteArticle({ articleId, initialVotes }) {
   };
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>An error has occurred!</div>;
   }
 
   return (

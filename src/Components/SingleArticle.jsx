@@ -16,20 +16,14 @@ export default function SingleArticle() {
     getArticleByArticleId(articleId)
       .then((data) => {
         setArticle(data);
+        return getCommentsByArticleId(articleId);
       })
-      .catch((error) => {
-        setError(error);
-      });
-    getCommentsByArticleId(articleId)
       .then((comments) => {
         setComments(comments);
       })
       .catch((error) => {
-        if (error.response && error.response.status === 404) {
-          setComments([]);
-        } else {
-          setError(error);
-        }
+        setComments([]);
+        setError(error);
       });
   }, [articleId]);
 
@@ -72,7 +66,7 @@ export default function SingleArticle() {
           ) : (
             <div className="comments-post">
               <PostComment articleId={articleId} />
-              <CommentList comments={comments} />
+              <CommentList comments={comments} setComments={setComments} />
             </div>
           )}
         </div>

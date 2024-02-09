@@ -14,16 +14,23 @@ body {
 
 header {
   /* background-color: #9c1d5c; */
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoqBUKCvAR9CJkEyHO1W3JIkL0gtq3wju96A&s');
-  color: white;
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoqBUKCvAR9CJkEyHO1W3JIkL0gtq3wju96A&s'); */
+  color: rgb(94, 51, 84);
   text-align: center;
   padding: 15px;
-  height: 150px
+  height: 200px;
+  background-color: #ec85c1;
+}
+header h1{
+  font-size: 60px;
 }
 
 .navigation {
   background-color: #572748;
   padding: 10px 0;
+  margin-top: 40px;
+  width:60%;
+  margin: 0 auto ;
 }
 
 nav ul {
@@ -37,6 +44,7 @@ nav ul {
 nav ul li {
   margin: 0;
   padding: 10px;
+  width: 90px;
 }
 
 nav ul li:not(:last-child) {
@@ -60,7 +68,7 @@ nav ul li a:hover {
 /* Home */
 
 .recent-articles-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: 20px;
 }
@@ -103,7 +111,7 @@ nav ul li a:hover {
 /* Articles */
 
 .articles {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: 20px;
 }
@@ -199,18 +207,20 @@ nav ul li a:hover {
 /* SingleArticle */
 
 .article-view {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  margin-top: 10px;
 }
 
 .article-view img {
-  max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  width: 100%;
+  
 }
 
 .loading {
@@ -233,16 +243,12 @@ nav ul li a:hover {
 } */
 
 .comments-button {
-  background-color: #007bff;
+  background-color: #007f7f ;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-}
-
-.comments-button:hover {
-  background-color: #0056b3;
 }
 
 .comment-section {
@@ -270,7 +276,7 @@ nav ul li a:hover {
   padding: 8px 16px;
   border: none;
   border-radius: 10px;
-  background-color: #55073b;
+  background-color:  #912579;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
@@ -278,7 +284,7 @@ nav ul li a:hover {
 }
 
 .vote-button:hover {
-  background-color: #912579;
+  background-color: #b13387;
 }
 
 .vote-button:disabled {
@@ -326,7 +332,7 @@ nav ul li a:hover {
   padding: 10px;
   border:#333;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #007f7f ;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -339,4 +345,43 @@ nav ul li a:hover {
 
 .comment-section .comment-form-container{
 margin-bottom: 30px;
+}
+
+/* Button styles */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color:  #912579;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b13387;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Delete confirmation message styles */
+.delete-confirmation {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0e4e4;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.delete-confirmation p {
+  margin: 5px;
+}
+
+.delete-confirmation button {
+  margin-right: 10px;
+  background-color: #007f7f ;
 }
